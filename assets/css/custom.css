@@ -72,11 +72,16 @@
   .sidebar .author__content {
     line-height: 1.45 !important;
   }
-  .sidebar .author__avatar img {
+  .sidebar .author__avatar img.avatar--circle {
     width: 108px !important;
+    height: 108px !important;
     max-width: 108px !important;
     padding: 3px;
-    border: 1px solid #e2e6ea;
+  }
+  .sidebar .author__avatar img.avatar--rect {
+    width: 96px !important;
+    height: 128px !important;
+    max-width: 96px !important;
   }
   .sidebar .author__name {
     margin: 0.55em 0 0.2em !important;
@@ -126,10 +131,35 @@
   background: #16375a;
 }
 
-/* ---------- sidebar ---------- */
+/* ---------- sidebar portrait ---------- */
+/* Which shape is used is decided by SITE["avatar_shape"] in build_site.py,
+   which puts `avatar--circle` or `avatar--rect` on the img.
+   NOTE: the selectors must out-specify main.css's `.author__avatar img`. */
 .author__avatar img {
+  display: block;
+  box-sizing: border-box;
+  object-fit: cover;
+  background: #fff;
+}
+.author__avatar img.avatar--circle {
+  /* for a square (1:1) head shot */
+  width: 175px;
+  height: 175px;
+  max-width: 100%;
   border-radius: 50%;
-  max-width: 175px;
+  border: 1px solid #e2e6ea;
+  padding: 5px;
+  object-position: 50% 12%;
+}
+.author__avatar img.avatar--rect {
+  /* for a 3:4 half-body portrait */
+  width: 150px;
+  height: 200px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e2e6ea;
+  padding: 0;
+  object-position: 50% 8%;
 }
 .author__bio {
   margin-top: 0.35em;

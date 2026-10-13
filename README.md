@@ -7,6 +7,8 @@ theme that academicpages is built on).
 Because the site is plain static HTML, GitHub Pages serves it directly — there is
 no Jekyll/Ruby build step, and no `_config.yml` to maintain.
 
+Live at <https://liuguanlin818.github.io/>.
+
 ## Structure
 
 ```
@@ -16,42 +18,48 @@ research/index.html      research statement, EHR-to-EEG comparison, current prop
 awards/index.html        grants, patents, software copyrights, competition awards
 cv/index.html            full CV in HTML
 404.html                 not-found page
-images/profile.jpg       sidebar avatar (480 x 480)
+images/profile.jpg       sidebar avatar
 images/favicon.svg       browser tab icon
-files/Liu_Guanlin_CV.pdf printable CV, generated from cv/index.html
-assets/css/              main.css + fontawesome.css (from the academicpages theme) + custom.css
+files/Liu_Guanlin_CV.pdf printable CV
+assets/css/main.css      Minimal Mistakes theme stylesheet (do not edit)
+assets/css/fontawesome.css  icon font stylesheet (do not edit)
+assets/css/custom.css    all site-specific styling lives here
 assets/webfonts/         Font Awesome woff2 files
 .nojekyll                tells GitHub Pages not to run Jekyll
 ```
 
-All site-specific styling lives in `assets/css/custom.css`. `main.css` and
-`fontawesome.css` are stock theme files — do not edit them.
-
 ## Editing content
 
-The pages are generated from a single script so the header, sidebar and footer
-stay in sync. The generator is kept outside this folder at
-`E:\Program Files (x86)\海外导师采集\website_lgl_tmp\build_site.py`, and writes
-into this directory. Run it with:
+The pages are generated from a single script, `tools/build_site.py`, so the
+header, sidebar and footer stay in sync across all five pages. `tools/` is
+listed in `.gitignore`, so the tooling stays local and never reaches the
+published site — the repository itself holds only the 19 files above.
 
 ```
-C:\Python311\python.exe "E:\Program Files (x86)\海外导师采集\website_lgl_tmp\build_site.py"
+C:\Python311\python.exe tools\build_site.py      # regenerate the pages
+C:\Python311\python.exe tools\preview.py         # regenerate + serve + open a browser
+C:\Python311\python.exe tools\publish.py -m "msg"  # regenerate + commit + push
+C:\Python311\python.exe tools\make_avatar.py "photo.jpg" --mode half  # 3:4 avatar
 ```
 
-If you would rather hand-edit, each `index.html` is self-contained and readable —
-just keep the `head`/sidebar markup identical across pages.
+`tools\维护手册.md` documents the whole workflow, including the VS Code tasks in
+`.vscode\tasks.json` (build / preview / publish / avatar).
+
+All text content lives in `tools/build_site.py`; all styling in
+`assets/css/custom.css`. Do not hand-edit the generated `index.html` files —
+they are overwritten on the next build.
 
 ## Publishing
 
 ```
-cd "E:\Program Files (x86)\海外导师采集\website_lgl"
-git remote add origin git@github.com:Liuguanlin818/liuguanlin818.github.io.git
-git push -u origin main --force
+C:\Python311\python.exe tools\publish.py -m "Describe the change"
 ```
 
-`--force` replaces the old Next.js export that used to be in the repository. If
-you want to keep that history instead, clone the repository first, delete its old
-files, copy this folder's contents in, and push normally.
+or, from the repository root:
 
-After the push, GitHub Pages rebuilds within a minute or two and the site is live
-at <https://liuguanlin818.github.io/>.
+```
+git add -A && git commit -m "Describe the change" && git push
+```
+
+GitHub Pages picks the change up within a minute or two; press `Ctrl+F5` to
+bypass the browser cache.

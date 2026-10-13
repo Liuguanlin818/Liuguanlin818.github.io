@@ -1,0 +1,11 @@
+# Local-only tooling and editor settings: not part of the published website.
+# Keeping this list small means the public repo stays at 19 files.
+tools/
+.vscode/
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
