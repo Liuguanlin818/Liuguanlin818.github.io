@@ -104,7 +104,7 @@
   }
   .sidebar .author__name {
     margin: 0.55em 0 0.2em !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
   .sidebar .author__bio {
     margin-bottom: 0.7em !important;
@@ -189,7 +189,7 @@
    breakpoint: name 16px, bio 13.5px, list 13.5px. At 13.5px the theme's
    .fa-fw icon box is 1.25em = 16.875px, which is what the template shows. */
 .sidebar .author__name {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
 }
 /* The portrait is centred in the same column so that the centred name shares
