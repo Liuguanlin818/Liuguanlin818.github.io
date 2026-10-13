@@ -22,14 +22,33 @@
 .greedy-nav .visible-links li:last-child {
   margin-right: 0;
 }
+/* The theme leaves .masthead__menu-item at 1em, which computes to 16px on
+   academicpages. Pinned here so the nav matches it whatever the base size is. */
 .masthead__menu-item {
-  font-size: 0.82em;
+  font-size: 16px;
   white-space: nowrap;
+}
+#theme-toggle a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  cursor: pointer;
+  color: inherit;
+}
+#theme-toggle i {
+  font-size: 18px;
 }
 @media (max-width: 47.9em) {
   .greedy-nav .visible-links li:first-child {
     flex: 1 0 100%;
     padding-right: 0;
+  }
+  .masthead__menu-item {
+    font-size: 14px;
+  }
+  #theme-toggle i {
+    font-size: 16px;
   }
 }
 
@@ -85,13 +104,17 @@
   }
   .sidebar .author__name {
     margin: 0.55em 0 0.2em !important;
-    font-size: 1.15em !important;
+    font-size: 16px !important;
   }
   .sidebar .author__bio {
     margin-bottom: 0.7em !important;
   }
   .sidebar .author__desktop {
     display: block !important;
+  }
+  .sidebar .author__urls,
+  .sidebar .author__bio {
+    font-size: 13.5px !important;
   }
 }
 
@@ -161,17 +184,32 @@
   padding: 0;
   object-position: 50% 8%;
 }
+/* ---------- sidebar typography ----------
+   Pinned to the values academicpages' theme actually computes at the desktop
+   breakpoint: name 16px, bio 13.5px, list 13.5px. At 13.5px the theme's
+   .fa-fw icon box is 1.25em = 16.875px, which is what the template shows. */
+.sidebar .author__name {
+  font-size: 16px;
+}
 .author__bio {
   margin-top: 0.35em;
-  font-size: 0.85em;
+  font-size: 13.5px;
   line-height: 1.45;
   color: #4b4b4b;
 }
-.author__urls {
-  font-size: 0.85em;
+/* The theme stacks a .75em on .sidebar li, so pin the list items directly
+   instead of the <ul>: 13.5px is what academicpages computes. */
+.sidebar .author__urls li,
+.sidebar .author__urls li a {
+  font-size: 13.5px;
 }
 .author__urls li + li {
   margin-top: 0.15em;
+}
+/* main.css colours ORCID green only for the academicons class
+   (.social-icons .ai-orcid); we use the Font Awesome glyph, so mirror it. */
+.social-icons .fa-orcid {
+  color: #a6ce39;
 }
 
 /* ---------- page content ---------- */
