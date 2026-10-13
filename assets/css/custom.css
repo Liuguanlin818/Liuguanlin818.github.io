@@ -190,6 +190,16 @@
    .fa-fw icon box is 1.25em = 16.875px, which is what the template shows. */
 .sidebar .author__name {
   font-size: 16px;
+  text-align: center;
+}
+/* The portrait is centred in the same column so that the centred name shares
+   its centre line with the photo (otherwise the two are ~21px apart). */
+.sidebar .author__avatar {
+  text-align: center;
+}
+.author__avatar img {
+  margin-left: auto;
+  margin-right: auto;
 }
 .author__bio {
   margin-top: 0.35em;
