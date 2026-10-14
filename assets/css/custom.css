@@ -268,13 +268,13 @@
 }
 .pub__fig {
   /* one fixed box for every paper, so rows stay even whatever the aspect
-     ratio is (the DG-MRM poster is portrait, the architectures are wide) */
+     ratio is (the DG-MRM poster is portrait, the architectures are wide).
+     No frame: the figures sit directly on the page. */
   flex: 0 0 216px;
   width: 216px;
   height: 138px;
   box-sizing: border-box;
-  border: 1px solid #e2e6ea;
-  border-radius: 6px;
+  border: none;
   background: #fff;
   overflow: hidden;
 }
@@ -306,6 +306,9 @@
     max-height: 240px;
     margin-bottom: 0.7em;
   }
+}
+.pub__rank {
+  font-weight: 600;
 }
 .pub__links a {
   text-decoration: none;
@@ -524,7 +527,4 @@ html[data-theme="dark"] .pub {
 }
 html[data-theme="dark"] .pub__links a {
   border-bottom-color: #7d93a8;
-}
-html[data-theme="dark"] .pub__fig {
-  border-color: #6a6a6a;
 }
