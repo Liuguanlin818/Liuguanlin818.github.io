@@ -342,6 +342,26 @@
   margin-bottom: 0.25em;
 }
 
+/* ---------- inline PDF viewer on the CV page ---------- */
+.pdf-viewer {
+  margin-top: 1.8em;
+}
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 85vh;
+  min-height: 720px;
+  border: 1px solid #e2e6ea;
+  border-radius: 6px;
+  background: #fff;
+}
+@media (max-width: 47.9em) {
+  .pdf-viewer iframe {
+    height: 70vh;
+    min-height: 520px;
+  }
+}
+
 /* ---------- research experience entries ----------
    Header (title, date, supervisor) sits in a blue-barred box; the figure and the
    description below it are indented to line up with the header text. */
