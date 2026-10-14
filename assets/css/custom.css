@@ -364,9 +364,14 @@
   align-items: baseline;
   gap: 1em;
 }
-/* the page title on Research Experience gets the same rule as the section
-   headings, matching how Professional Experience is presented on the CV */
+/* the page title on Research Experience is given exactly the treatment the
+   section headings use, so it matches "Professional Experience": same size,
+   same weight, same rule under it, same padding and spacing */
 .page-research .page__title {
+  font-size: 1.25em;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0 0 0.5em;
   padding-bottom: 0.25em;
   border-bottom: 1px solid #e6e6e6;
 }
