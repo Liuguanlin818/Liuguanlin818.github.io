@@ -357,6 +357,20 @@
 .re-item > p {
   padding-left: calc(3px + 0.85em);
 }
+/* supervisor on the left, date on the right, on the same line */
+.re-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+}
+/* the page title on Research Experience gets the same rule as the section
+   headings, matching how Professional Experience is presented on the CV */
+.page-research .page__title {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .re-item .pub-figure {
   margin: 0 0 1em;
 }
