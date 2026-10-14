@@ -267,21 +267,29 @@
   align-items: flex-start;
 }
 .pub__fig {
+  /* one fixed box for every paper, so rows stay even whatever the aspect
+     ratio is (the DG-MRM poster is portrait, the architectures are wide) */
   flex: 0 0 216px;
   width: 216px;
+  height: 138px;
+  box-sizing: border-box;
+  border: 1px solid #e2e6ea;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
 }
 .pub__fig a {
   display: block;
+  width: 100%;
+  height: 100%;
   border-bottom: none !important;
   text-decoration: none;
 }
 .pub__fig img {
   display: block;
   width: 100%;
-  height: auto;
-  border: 1px solid #e2e6ea;
-  border-radius: 6px;
-  background: #fff;
+  height: 100%;
+  object-fit: contain;
 }
 .pub__body {
   flex: 1 1 auto;
@@ -294,6 +302,8 @@
   .pub__fig {
     width: 100%;
     flex-basis: auto;
+    height: auto;
+    max-height: 240px;
     margin-bottom: 0.7em;
   }
 }
@@ -477,4 +487,44 @@ table.cmp td[colspan="2"] {
   .site-footer {
     display: none !important;
   }
+}
+
+/* ---------- dark theme overrides ----------
+   Every colour above was picked for a white page, so on the theme's dark
+   palette the muted greys and the navy accent lose their contrast. These
+   overrides only fire when the toggle sets html[data-theme="dark"], so the
+   light rendering is untouched. */
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .pub__authors,
+html[data-theme="dark"] .pub__venue,
+html[data-theme="dark"] .cv-entry__where,
+html[data-theme="dark"] .meta-note,
+html[data-theme="dark"] .cv-intro,
+html[data-theme="dark"] .dim,
+html[data-theme="dark"] .author__bio {
+  color: #c9cdd1;
+}
+html[data-theme="dark"] .cv-entry__when,
+html[data-theme="dark"] .pub-figure figcaption {
+  color: #b6bcc2;
+}
+html[data-theme="dark"] ul.plain li::before {
+  color: #8fbfe8;
+}
+html[data-theme="dark"] .badge-pill {
+  background: #2f4152;
+  color: #cfe4f7;
+}
+html[data-theme="dark"] .badge-pill--alt {
+  background: #4a3a22;
+  color: #f0d59a;
+}
+html[data-theme="dark"] .pub {
+  border-left-color: #5b6b7c;
+}
+html[data-theme="dark"] .pub__links a {
+  border-bottom-color: #7d93a8;
+}
+html[data-theme="dark"] .pub__fig {
+  border-color: #6a6a6a;
 }
