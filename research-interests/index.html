@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Research Interests</title>
+<meta name="description" content="Guanlin Liu - machine learning for electronic health records and EEG-based brain-computer interfaces.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://liuguanlin818.github.io/">
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Guanlin Liu&#x27;s Homepage">
+<meta property="og:title" content="Research Interests">
+<meta property="og:url" content="https://liuguanlin818.github.io/">
+<meta property="og:type" content="website">
+<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/fontawesome.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><span class="navicon"></span></button>
+        <ul class="visible-links">
+  <li class="masthead__menu-item masthead__menu-item--lg persist "><a href="../index.html">Guanlin Liu&#x27;s Homepage</a></li>
+  <li class="masthead__menu-item"><a href="../index.html">About</a></li>
+  <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
+  <li class="masthead__menu-item selected"><a href="../research-interests/index.html">Research Interests</a></li>
+  <li class="masthead__menu-item"><a href="../research/index.html">Research Experience</a></li>
+  <li class="masthead__menu-item"><a href="../awards/index.html">Awards</a></li>
+  <li class="masthead__menu-item"><a href="../cv/index.html">CV</a></li>
+  <li id="theme-toggle" class="masthead__menu-item persist tail"><a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<div id="main" role="main">
+  <div class="sidebar sticky">
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="author__avatar">
+        <img src="../images/profile.jpg" class="author__avatar avatar--circle" alt="Guanlin Liu" fetchpriority="high" />
+      </div>
+      <div class="author__content">
+        <h3 class="author__name">Guanlin Liu</h3>
+        <p class="author__bio"></p>
+      </div>
+      <div class="author__urls-wrapper">
+        <button class="btn btn--inverse">Contact</button>
+        <ul class="author__urls social-icons">
+          <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Jinan, Shandong, China</li>
+          <li><a href="mailto:liuguanlin0@163.com"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+          <li><a href="https://orcid.org/0009-0001-2721-5912"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
+          <li><a href="https://github.com/Liuguanlin818"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+          <li><a href="../cv/index.html"><i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>Curriculum Vitae</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Research Interests">
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title" itemprop="headline">Research Interests</h1>
+      </header>
+      <section class="page__content" itemprop="text">
+<div class="interest">
+  <h3>Generalisable and calibration-efficient EEG decoding</h3>
+  <p>Decoders that transfer across subjects with minimal per-user calibration. I want to represent
+  brain connectivity as a dynamic graph and learn subject-invariant yet individually adaptive
+  representations with contrastive objectives, bringing the structure-discovery idea from my
+  dynamic heterogeneous network work on EHR data into EEG.</p>
+</div>
+
+<div class="interest">
+  <h3>Self-supervised brain foundation models for wearable, low-density EEG</h3>
+  <p>Pretraining a compact EEG foundation model on unlabelled recordings from dry-sensor,
+  low-density headsets, combining masked and autoregressive prediction in the time&ndash;frequency
+  domain with prototype-based contrastive learning, so that oscillatory rhythms and cross-channel
+  dependencies are captured without manual annotation.</p>
+</div>
+
+<div class="interest">
+  <h3>Interpretable and closed-loop BCI for cognitive-state monitoring</h3>
+  <p>Decoders whose decisions can be explained in terms of brain regions, frequency bands and
+  connectivity patterns, embedded in a closed loop that adapts as cognitive state drifts over long
+  real-world sessions. Target states: attention, mental workload, fatigue and mood, with mood and
+  depression monitoring as the clinical-facing application.</p>
+</div>
+
+      </section>
+    </div>
+  </article>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>&copy; 2026 Guanlin Liu</span>
+    <span class="site-footer__sep">&middot;</span>
+    <span>Last updated October 2026</span>
+  </div>
+</footer>
+<script>
+/* Day / night toggle. The dark palette lives in main.css behind
+   html[data-theme=dark]; this only flips the attribute and remembers the choice,
+   mirroring what academicpages' main.min.js does (rewritten without jQuery). */
+(function () {
+  var KEY = 'theme';
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function preferred() {
+    var v = null;
+    try { v = localStorage.getItem(KEY); } catch (e) {}
+    if (v === 'dark' || v === 'light') { return v; }
+    return (mq && mq.matches) ? 'dark' : 'light';
+  }
+
+  function apply(mode) {
+    var dark = mode === 'dark';
+    var root = document.documentElement;
+    if (dark) { root.setAttribute('data-theme', 'dark'); }
+    else { root.removeAttribute('data-theme'); }
+    var icon = document.getElementById('theme-icon');
+    if (icon) {
+      icon.classList.toggle('fa-sun', !dark);
+      icon.classList.toggle('fa-moon', dark);
+    }
+  }
+
+  apply(preferred());
+
+  var toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var next = document.documentElement.getAttribute('data-theme') === 'dark'
+        ? 'light' : 'dark';
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      apply(next);
+    });
+  }
+})();
+</script>
+</body>
+</html>

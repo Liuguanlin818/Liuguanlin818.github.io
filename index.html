@@ -27,7 +27,8 @@
   <li class="masthead__menu-item masthead__menu-item--lg persist selected"><a href="index.html">Guanlin Liu&#x27;s Homepage</a></li>
   <li class="masthead__menu-item selected"><a href="index.html">About</a></li>
   <li class="masthead__menu-item"><a href="publications/index.html">Publications</a></li>
-  <li class="masthead__menu-item"><a href="research/index.html">Research</a></li>
+  <li class="masthead__menu-item"><a href="research-interests/index.html">Research Interests</a></li>
+  <li class="masthead__menu-item"><a href="research/index.html">Research Experience</a></li>
   <li class="masthead__menu-item"><a href="awards/index.html">Awards</a></li>
   <li class="masthead__menu-item"><a href="cv/index.html">CV</a></li>
   <li id="theme-toggle" class="masthead__menu-item persist tail"><a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li>
@@ -78,65 +79,23 @@ records to the brain: EEG decoders that transfer across subjects with little or 
 calibration, and whose decisions can be read in terms of brain regions, frequency bands and
 connectivity patterns.</p>
 
-<h2>Research Interests</h2>
-
-<div class="interest">
-  <h3>Generalisable and calibration-efficient EEG decoding</h3>
-  <p>Decoders that transfer across subjects with minimal per-user calibration. I want to represent
-  brain connectivity as a dynamic graph and learn subject-invariant yet individually adaptive
-  representations with contrastive objectives, bringing the structure-discovery idea from my
-  dynamic heterogeneous network work on EHR data into EEG.</p>
-</div>
-
-<div class="interest">
-  <h3>Self-supervised brain foundation models for wearable, low-density EEG</h3>
-  <p>Pretraining a compact EEG foundation model on unlabelled recordings from dry-sensor,
-  low-density headsets, combining masked and autoregressive prediction in the time&ndash;frequency
-  domain with prototype-based contrastive learning, so that oscillatory rhythms and cross-channel
-  dependencies are captured without manual annotation.</p>
-</div>
-
-<div class="interest">
-  <h3>Interpretable and closed-loop BCI for cognitive-state monitoring</h3>
-  <p>Decoders whose decisions can be explained in terms of brain regions, frequency bands and
-  connectivity patterns, embedded in a closed loop that adapts as cognitive state drifts over long
-  real-world sessions. Target states: attention, mental workload, fatigue and mood, with mood and
-  depression monitoring as the clinical-facing application.</p>
-</div>
-
-<h2>Education</h2>
-
-<div class="cv-entry">
-  <div class="cv-entry__head"><span class="cv-entry__what">B.Eng. in Computer Science and Technology</span></div>
-  <div class="cv-entry__where">Shandong Normal University, Jinan, China</div>
-  <ul>
-    <li>GPA 3.94 / 5.0 (89.4 / 100), top 10% of the cohort; holder of the First-class Scholarship
-    and the Outstanding Student award.</li>
-    <li>Graduation thesis: <em>Dynamic Graph and Multi-view Drug Information for Safe Medication
-    Recommendation</em> (grade 95), supervised by Prof. Xiaomei Yu.</li>
-    <li>Coursework: Linear Algebra (100), Discrete Mathematics (99), HCI Technology (99),
-    Data Structure (97), Web Development (97), Software Engineering (96), Java Programming (95),
-    Artificial Intelligence (93), Machine Learning (93), Digital Image Processing (92),
-    Algorithm Analysis and Design (90).</li>
-  </ul>
-</div>
-
 <h2>Selected Publications</h2>
-<div class="pub">
-  <div class="pub__title">ENCMed: A 3D-Encoder Framework with Neighbor Contrastive Learning for Safe Medication Recommendation <span class="badge-pill badge-pill--alt">first author</span></div>
-  <div class="pub__authors"><strong>G. Liu</strong>, Z. Liu, X. Yu, X. Li, X. Zheng, X. Fan</div>
-  <div class="pub__venue"><em>Manuscript under review</em>, 2026.</div>
-</div>
 <div class="pub">
   <div class="pub__title">DNMDR: Dynamic Networks and Multi-view Drug Representations for Safe Medication Recommendation <span class="badge-pill badge-pill--alt">first author</span></div>
   <div class="pub__authors"><strong>G. Liu</strong>, Z. Liu, X. Yu, X. Li, X. Zheng, X. Fan</div>
   <div class="pub__venue"><em>Knowledge-Based Systems</em> <span class="badge-pill">IF 8.0</span>, 2025. <span class="pub__links">[<a href="https://doi.org/10.1016/j.knosys.2025.114327">DOI</a>]</span></div>
 </div>
-<div class="pub">
-  <div class="pub__title">CLEAR: Prototype-conditioned flow purification for LLM-based rumor detection with Dirichlet evidential learning</div>
-  <div class="pub__authors">Z. Liu, H. Wu, X. Fang, <strong>G. Liu</strong>, et al.</div>
-  <div class="pub__venue"><em>Information Processing &amp; Management</em> <span class="badge-pill">IF 8.1</span>, 2026. <span class="pub__links">[<a href="https://doi.org/10.1016/j.ipm.2026.104887">DOI</a>]</span></div>
-</div>
+<figure class="pub-figure">
+  <a href="images/DNMDR_model.png" target="_blank" rel="noopener">
+    <img src="images/DNMDR_model.png" alt="The DNMDR architecture: dynamic graph construction, longitudinal patient representation, multi-view drug representation and medication combination prediction" loading="lazy" />
+  </a>
+  <figcaption><strong>Figure 1.</strong> The DNMDR architecture. A patient&rsquo;s visits are turned
+  into a weighted dynamic graph and encoded longitudinally with GA-LSTM and GRU branches, while drugs
+  are embedded from three views &mdash; molecular graphs (MPNN), an EHR graph and a DDI graph (GAT),
+  and key&ndash;value pairs; the two representations are fused to predict the medication combination
+  under DDI, multi-label and loss constraints. Click the figure to view it full size.</figcaption>
+</figure>
+
 <p class="view-all"><a href="publications/index.html">View all publications &rarr;</a></p>
 
       </section>
