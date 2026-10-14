@@ -260,10 +260,42 @@
   color: #5b5b5b;
   margin-top: 0.1em;
 }
-.pub__note {
-  font-size: 0.9em;
-  color: #444;
-  margin-top: 0.35em;
+/* ---------- paper entry with the model figure on the left ---------- */
+.pub--with-fig {
+  display: flex;
+  gap: 1.1em;
+  align-items: flex-start;
+}
+.pub__fig {
+  flex: 0 0 216px;
+  width: 216px;
+}
+.pub__fig a {
+  display: block;
+  border-bottom: none !important;
+  text-decoration: none;
+}
+.pub__fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e2e6ea;
+  border-radius: 6px;
+  background: #fff;
+}
+.pub__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+@media (max-width: 47.9em) {
+  .pub--with-fig {
+    display: block;
+  }
+  .pub__fig {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 0.7em;
+  }
 }
 .pub__links a {
   text-decoration: none;
