@@ -390,6 +390,18 @@
   color: #6b6b6b;
   white-space: nowrap;
 }
+
+/* Research Grants listing: the date always sits on its own line under the
+   title, right-aligned. Without this, flex-wrap pushes the date to the left
+   edge whenever a long title forces it onto a second line. */
+.cv-entry--stack .cv-entry__head {
+  display: block;
+}
+.cv-entry--stack .cv-entry__when {
+  display: block;
+  text-align: right;
+  margin-top: 0.15em;
+}
 .cv-entry ul,
 .cv-entry p {
   margin-top: 0.4em;
