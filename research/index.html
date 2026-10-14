@@ -27,9 +27,9 @@
   <li class="masthead__menu-item masthead__menu-item--lg persist "><a href="../index.html">Guanlin Liu&#x27;s Homepage</a></li>
   <li class="masthead__menu-item"><a href="../index.html">About</a></li>
   <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
-  <li class="masthead__menu-item"><a href="../research-interests/index.html">Research Interests</a></li>
   <li class="masthead__menu-item selected"><a href="../research/index.html">Research Experience</a></li>
   <li class="masthead__menu-item"><a href="../awards/index.html">Awards</a></li>
+  <li class="masthead__menu-item"><a href="../research-interests/index.html">Research Interests</a></li>
   <li class="masthead__menu-item"><a href="../cv/index.html">CV</a></li>
   <li id="theme-toggle" class="masthead__menu-item persist tail"><a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li>
         </ul>
@@ -67,103 +67,9 @@
         <h1 class="page__title" itemprop="headline">Research Experience</h1>
       </header>
       <section class="page__content" itemprop="text">
-<p>My research moves along one line: <em>when the relations that matter are not written
-down anywhere, learn them from the data and let them evolve over time.</em> I first developed this
-idea on electronic health records, where the interactions between diagnoses, procedures and
-medications are implicit; I now want to apply it to EEG, where there is no predefined map from
-electrodes to brain regions.</p>
-
-<h2 id="from-ehr-to-eeg">From EHR to EEG: the same problem twice</h2>
-
-<table class="cmp">
-  <thead>
-    <tr><th>Shared difficulty</th><th>Previous work &mdash; EHR</th><th>This plan &mdash; EEG / BCI</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>No explicit structure in the data</strong></td>
-      <td>Interactions among diagnoses, procedures and medicines are implicit in the record, so a
-      static graph cannot represent them.</td>
-      <td>Neuro-mechanisms are complex and EEG has no predefined structure linking electrodes to
-      brain regions.</td>
-    </tr>
-    <tr>
-      <td><strong>Spatial and temporal dependencies at once</strong></td>
-      <td>The structural correlation among heterogeneous medical events and the sequential
-      dependency across a patient&rsquo;s visits must be modelled together.</td>
-      <td>The spatial correlation across EEG channels and the temporal dependency of the evolving
-      brain network must be modelled together.</td>
-    </tr>
-    <tr>
-      <td><strong>The same remedy</strong></td>
-      <td colspan="2">Learn the structure from the data instead of assuming it, and let it change
-      over time as a dynamic graph.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="directions">Research Directions</h2>
-
-<div class="interest">
-  <h3>1. Generalisable and calibration-efficient EEG decoding</h3>
-  <p>I aim to build EEG decoders that transfer across subjects with minimal per-user calibration. I
-  will represent brain connectivity as a dynamic graph and learn subject-invariant yet individually
-  adaptive representations with contrastive objectives.</p>
-</div>
-
-<div class="interest">
-  <h3>2. Self-supervised brain foundation models for wearable, low-density EEG</h3>
-  <p>I want to pretrain a compact EEG foundation model on unlabelled recordings from dry-sensor,
-  low-density headsets, combining masked and autoregressive prediction in the time&ndash;frequency
-  domain with prototype-based contrastive learning, so that oscillatory rhythms and cross-channel
-  dependencies are captured without manual annotation.</p>
-</div>
-
-<div class="interest">
-  <h3>3. Interpretable and closed-loop BCI for cognitive-state monitoring</h3>
-  <p>I want decoders whose decisions can be explained in terms of brain regions, frequency bands and
-  connectivity patterns, and to embed them in a closed loop that adapts as cognitive state drifts
-  over long real-world sessions. Target states: attention, mental workload, fatigue and mood, with
-  mood and depression monitoring as the clinical-facing application.</p>
-</div>
-
-<h2 id="proposal">Current Proposal: Adaptive Brain-Graph Learning for Cross-Subject EEG Decoding and Mood Monitoring</h2>
-
-<h3>Background</h3>
-<p>Depression is a pervasive mental disorder, and early recognition and timely intervention can
-considerably alleviate the suffering of patients. Compared with physician reviews and psychiatric
-questionnaires, electroencephalography (EEG) is an objective physiological signal that is not
-influenced by human consciousness and cannot easily be imitated, which makes EEG-based depression
-recognition attractive. The same structural problem appeared in my EHR work, where the relations
-among medical events were also implicit and which I solved with a weighted dynamic network.</p>
-
-<h3>Challenges</h3>
-<ul>
-  <li>The complexity of the neuro-mechanisms means that EEG data lacks an explicit topological
-  structure.</li>
-  <li>Capturing spatio-temporal features is challenging from multi-channel, high-density EEG
-  signals.</li>
-</ul>
-
-<h3>Methodology</h3>
-<ol>
-  <li>Explore the brain-network connectivity state reflected by EEG and compute the adjacency
-  matrix.</li>
-  <li>Use a multi-layer Temporal Graph Neural Network (TGNN) to fuse multi-dimensional information,
-  modelling the spatial correlation between channels and the temporal dependency of brain-network
-  changes.</li>
-  <li>Compute node importance from the graph topology and retain the most representative nodes for
-  the depression prediction.</li>
-</ol>
-
-<h3>Expected contributions</h3>
-<p>A method for depression detection from EEG that adaptively constructs a plausible brain-network
-structure while preserving its dynamic changes, validated by extensive experiments on publicly
-available datasets. In the longer term, I want to develop a general model that integrates
-heterogeneous sources such as ECG, EOG and GSR towards a neurocognitive brain&ndash;machine
-interface.</p>
-
-<h2 id="past-projects">Selected Past Projects</h2>
+<p>I have worked on machine learning and software projects across several kinds of data. They
+cover electronic health records, language models, edge computing and robotics. All of them were
+carried out at Shandong Normal University, most within an undergraduate research programme.</p>
 
 <div class="cv-entry">
   <div class="cv-entry__head"><span class="cv-entry__what">Explainable deep learning methods for electronic health records</span><span class="cv-entry__when">05/2023 &ndash; 08/2026</span></div>
