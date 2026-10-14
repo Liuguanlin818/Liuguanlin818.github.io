@@ -275,7 +275,7 @@
   height: 138px;
   box-sizing: border-box;
   border: none;
-  background: #fff;
+  background: transparent;
   overflow: hidden;
 }
 .pub__fig a {
@@ -290,6 +290,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
 .pub__body {
   flex: 1 1 auto;
