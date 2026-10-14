@@ -376,6 +376,12 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
+.re-item > p {
+  /* slightly smaller than the supervisor line in the header, so the two are
+     easy to tell apart */
+  font-size: 0.85em;
+}
+
 .re-item .pub-figure {
   margin: 0 0 1em;
 }
