@@ -406,6 +406,13 @@
   margin: 0 0 1em;
 }
 
+/* the funder sits on the same row as the date: a touch smaller than the default
+   0.9em so the two fit side by side on one line */
+.re-funder {
+  font-size: 0.85em;
+  min-width: 0;
+}
+
 /* ---------- publication figure ---------- */
 .pub-figure {
   margin: 1.5em 0 2em;
