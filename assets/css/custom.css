@@ -342,6 +342,25 @@
   margin-bottom: 0.25em;
 }
 
+/* ---------- research experience entries ----------
+   Header (title, date, supervisor) sits in a blue-barred box; the figure and the
+   description below it are indented to line up with the header text. */
+.re-item {
+  margin-bottom: 2.5em;
+}
+.re-head {
+  padding-left: 0.85em;
+  border-left: 3px solid #dfe6ee;
+  margin-bottom: 1em;
+}
+.re-item .pub-figure,
+.re-item > p {
+  padding-left: calc(3px + 0.85em);
+}
+.re-item .pub-figure {
+  margin: 0 0 1em;
+}
+
 /* ---------- publication figure ---------- */
 .pub-figure {
   margin: 1.5em 0 2em;
@@ -556,6 +575,9 @@ html[data-theme="dark"] .badge-pill {
 html[data-theme="dark"] .badge-pill--alt {
   background: #4a3a22;
   color: #f0d59a;
+}
+html[data-theme="dark"] .re-head {
+  border-left-color: #5b6b7c;
 }
 html[data-theme="dark"] .pub {
   border-left-color: #5b6b7c;
