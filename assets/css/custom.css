@@ -425,6 +425,25 @@ ul.plain li::before {
   color: #1F4E79;
 }
 
+/* Competition awards and scholarships: the year sits on the same line as the
+   award name and is pushed to the right, matching Research Grants. */
+ul.plain li.award {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+}
+ul.plain li.award .award__name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+ul.plain li.award .award__when {
+  flex: 0 0 auto;
+  font-size: 0.85em;
+  color: #6b6b6b;
+  white-space: nowrap;
+}
+
 .dim {
   color: #777;
   font-size: 0.9em;
@@ -522,6 +541,7 @@ html[data-theme="dark"] .dim,
 html[data-theme="dark"] .author__bio {
   color: #c9cdd1;
 }
+html[data-theme="dark"] .award__when,
 html[data-theme="dark"] .cv-entry__when,
 html[data-theme="dark"] .pub-figure figcaption {
   color: #b6bcc2;
